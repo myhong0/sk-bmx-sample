@@ -1,0 +1,1 @@
+This sample application is configured to use a Session Cache service named:  scsSampleSessionServiceDWDemo001

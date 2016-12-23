@@ -1,0 +1,55 @@
+<!-- 
+	This sample program is provided AS IS and may be used, executed, copied and
+	modified without royalty payment by customer (a) for its own instruction and 
+	study, (b) in order to develop applications designed to run with an IBM 
+	WebSphere product, either for customer's own internal use or for redistribution 
+	by customer, as part of such an application, in customer's own products. "
+
+	5724-J34 (C) COPYRIGHT International Business Machines Corp. 2014
+	All Rights Reserved * Licensed Materials - Property of IBM
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+  <title>IBM Data Cache service and IBM Session Cache service sample - Airport Entry</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+  <link id="themeStyles" rel="stylesheet" href="dojo/dijit/themes/claro/claro.css"/>
+
+  <style type="text/css">
+	@import "css/document.css";
+  </style>
+  <link type='text/css' rel='stylesheet' href="dojo/dojo/resources/dojo.css"></link>
+</head>
+<body class="claro oneui" style="margin: 0; padding: 0;">
+
+  <div class="headerLogo">logo</div>
+  <div class="headerBackground">
+  <div class="headerTitle">IBM Data Cache service and IBM Session Cache service sample</div>
+  <div class="headerSubtitle">Airport Entry Sample</div>
+  </div>
+  <div class="bodyContent">
+  <h2>BlueMix Airport</h2>
+  <p>The Airport sample is provided as an introduction to IBM Data Cache service and IBM Session Cache service functionality 
+	 on BlueMix.  It runs simple create, read, update, and delete (CRUD) functions to IBM Data Cache service and IBM Session 
+	 Cache service in milliseconds.  The sample shows how large amounts of data (in this case, information about thousands of airports worldwide) 
+	 can be stored using IBM Data Cache service and IBM Session Cache service on BlueMix.  When using the sample, 
+	 the time taken to complete any CRUD operation is displayed, demonstrating the speed of accessing the grid.</p>
+  <br/> 	 
+  <h3>If this is the first time the sample application is accessed, it will pre-load data cache with 
+  	  airport information.  It may take a few seconds.  Please wait......</h3>	 
+  </div>	 
+  
+  <script>
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+        	window.location.replace("AirportEntry");
+        }
+    }
+    request.open('GET', 'AirportPreload', true);
+    request.send(null);
+  </script>
+  
+</body>
+</html>
