@@ -1,0 +1,12 @@
+declared-services:
+  elephant-sql-service:
+    label: elephantsql
+    plan: turtle
+applications:
+- name: aspnet-core-todo
+  random-route: true
+  memory: 512M
+  services:
+  - elephant-sql-service
+  env:
+    DOTNET_CLI_TELEMETRY_OPTOUT: 1
